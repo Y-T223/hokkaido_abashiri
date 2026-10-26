@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>網走市立美術館｜オホーツクの風土を描いた作品に出会う</title>
+<meta name="description" content="1972年開館。居串佳一をはじめ、網走ゆかりの作家とオホーツクの風土を描いた作品を収蔵・展示する網走市立美術館。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sea:#16263b; --sea-deep:#0f1b2c; --paper:#e8e6df; --ink:#22211d;
+  --brass:#a88a52; --brass-soft:#c9b284; --mute:#6c6a62; --line:#c8c3b4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;color:var(--ink);background:var(--paper);line-height:1.95;font-size:16px}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.serif{font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif}
+.wrap{width:min(1040px,92%);margin:0 auto}
+
+/* Hero */
+.hero{position:relative;min-height:92vh;min-height:92svh;background:var(--sea-deep) url("images/1.jpg") center/cover no-repeat;color:#f3efe4;display:flex;align-items:flex-end}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,27,44,.35) 0%,rgba(15,27,44,.88) 100%)}
+.hero .wrap{position:relative;padding:0 0 9vh;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.hero h1{font-family:"Shippori Mincho",serif;font-weight:500;font-size:clamp(34px,6vw,64px);letter-spacing:.18em;line-height:1.3}
+.hero p.lead{margin-top:18px;max-width:30em;color:#ddd6c4;font-size:15px}
+.hero .since{font-family:"Shippori Mincho",serif;writing-mode:vertical-rl;letter-spacing:.35em;font-size:15px;color:var(--brass-soft);border-right:1px solid var(--brass);padding-right:14px}
+.mark{position:absolute;top:calc(28px + env(safe-area-inset-top,0px));left:4%;font-family:"Shippori Mincho",serif;letter-spacing:.3em;font-size:13px;color:var(--brass-soft)}
+
+/* Sections */
+section{padding:104px 0}
+h2{text-wrap:balance;font-family:"Shippori Mincho",serif;font-weight:500;font-size:clamp(24px,3.4vw,34px);letter-spacing:.12em;line-height:1.6;margin-bottom:28px}
+h2::after{content:"";display:block;width:56px;height:1px;background:var(--brass);margin-top:18px}
+.two{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.two.rev{grid-template-columns:.95fr 1.05fr}
+.two.rev .txt{order:2}
+.frame{padding:12px;background:#f4f2ec;border:1px solid var(--line);box-shadow:0 18px 40px -22px rgba(22,38,59,.5)}
+.frame img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#cfcbbd}
+.txt p+p{margin-top:1.1em}
+.txt p{max-width:34em}
+
+/* Strengths */
+.dark{background:var(--sea);color:#ece7d8}
+.dark h2::after{background:var(--brass-soft)}
+.artists{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+.artists span{font-family:"Shippori Mincho",serif;border:1px solid var(--brass);padding:6px 20px;letter-spacing:.2em;color:var(--brass-soft)}
+
+/* Reviews */
+.reviews{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:8px}
+.rev-card{background:#f4f2ec;border:1px solid var(--line);padding:34px 32px}
+.stars{color:var(--brass);letter-spacing:.15em;font-size:18px}
+.rev-card p{margin-top:12px;font-size:15px;line-height:1.95;color:#3b3a34}
+
+/* Info */
+.info dl{display:grid;grid-template-columns:8em 1fr;border-top:1px solid var(--line)}
+.info dt,.info dd{padding:18px 4px;border-bottom:1px solid var(--line)}
+.info dt{font-family:"Shippori Mincho",serif;letter-spacing:.15em;color:var(--mute)}
+.info a{color:var(--sea);text-underline-offset:4px}
+.mapbox{margin-top:56px}
+.mapbox iframe{width:100%;height:420px;border:0;display:block;filter:grayscale(.25) sepia(.1)}
+.btn-row{text-align:center;margin-top:22px}
+.btn{display:inline-block;font-family:"Shippori Mincho",serif;letter-spacing:.2em;text-decoration:none;background:var(--sea);color:#f3efe4;padding:15px 44px;border:1px solid var(--sea);transition:background .25s,color .25s}
+.btn:hover{background:transparent;color:var(--sea)}
+.btn.line{background:transparent;color:var(--sea);margin:0 6px}
+.btn.line:hover{background:var(--sea);color:#f3efe4}
+
+footer{background:var(--sea-deep);color:#b9b3a1;text-align:center;padding:48px 4%;font-size:13px;letter-spacing:.1em}
+footer .serif{display:block;color:#ece7d8;font-size:17px;letter-spacing:.3em;margin-bottom:8px}
+
+@media(max-width:780px){
+  section{padding:72px 0}
+  .two,.two.rev,.reviews{grid-template-columns:1fr;gap:36px}
+  .two.rev .txt{order:0}
+  .hero .since{display:none}
+  .info dl{grid-template-columns:6.5em 1fr}
+  .mapbox iframe{height:320px}
+  .mark{font-size:11px;letter-spacing:.2em}
+  .hero .wrap{padding-bottom:7vh}
+  .rev-card{padding:26px 22px}
+  .btn-row .btn{display:block;width:100%;max-width:340px;margin:0 auto 14px;padding:16px 12px;text-align:center}
+  .btn.line{margin:0 auto 14px}
+  footer{padding-bottom:calc(48px + env(safe-area-inset-bottom,0px))}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="mark">ABASHIRI CITY ART MUSEUM</div>
+  <div class="wrap">
+    <div>
+      <h1>網走市立美術館</h1>
+      <p class="lead">オホーツクの風土が育てた作家たちの絵画、彫刻、版画。網走で半世紀以上、地域の美術を守り続ける美術館です。</p>
+    </div>
+    <div class="since">一九七二年開館</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap two">
+    <div class="txt">
+      <h2>オホーツクの風土と、作家の足跡</h2>
+      <p>網走ゆかりの作家と、オホーツク地域を題材にした作品を中心に収蔵・展示しています。絵画、彫刻、版画と、扱うジャンルは多彩です。</p>
+      <p>居串佳一をはじめ、高橋道雄、松樹路人らの作品を通して、この土地の自然と風土がどのように描かれてきたかをたどれます。</p>
+    </div>
+    <figure class="frame"><img src="images/2.jpg" alt="展示室の壁に掛けられた絵画と柔らかな照明" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <h2>地域と結びついた、独自のコレクション</h2>
+    <div class="txt">
+      <p>この地で生まれ、この地を描いた作品が、収蔵の核になっています。風土と結びついたコレクションは、網走の美術館ならではの特色です。</p>
+      <p>企画展も頻繁に開催しており、訪れるたびに異なる作品と出会えます。</p>
+    </div>
+    <div class="artists"><span>居串佳一</span><span>高橋道雄</span><span>松樹路人</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap two rev">
+    <div class="txt">
+      <h2>一人の画家の遺作から始まった美術館</h2>
+      <p>1972年の開館は、市内の美術収集家・宮川辰雄氏から、網走出身で独立美術協会で活躍した画家、居串佳一の油絵遺作38点の寄贈を受けたことがきっかけです。</p>
+      <p>北海道内で2番目に新築された美術館として誕生し、以来、地域の美術文化の拠点として歩んできました。</p>
+    </div>
+    <figure class="frame"><img src="images/3.jpg" alt="スケッチブックと絵筆が置かれた木の机" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <h2>来館された方の声</h2>
+    <div class="reviews">
+      <article class="rev-card" style="color:var(--ink)">
+        <div class="stars" aria-label="評価 5段階中4">★★★★</div>
+        <p>第一、第二展示室が企画系、第三、第四展示室が常設展(こちらは撮影禁止)。居串佳一画伯の遺族が纏まった点数を寄付した事より美術館が開館。道内でも歴史の長い公立美術館だ。町の中心部の端の文化会館のそばにあるため、JRで来た旅人にとってはやや行きづらいかもしれない。</p>
+        <p>満州滞在やアイヌに題を取った作品群もあり、昭和初期から戦中を経てパリ遊学に憧れながらも客死した一人の画業を知ってほしいと思う。</p>
+      </article>
+      <article class="rev-card" style="color:var(--ink)">
+        <div class="stars" aria-label="評価 5段階中5">★★★★★</div>
+        <p>オホーツクの周辺で数少ない美術館の一つです。歩いて回るのにちょうど良い広さで、じっくり作品を鑑賞することができます。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="info" id="access">
+  <div class="wrap">
+    <h2>ご利用案内</h2>
+    <dl>
+      <dt>住所</dt><dd>北海道網走市南6条西1丁目</dd>
+      <dt>電話番号</dt><dd><a href="tel:0152445045">0152-44-5045</a></dd>
+      <dt>休館日</dt><dd>月曜日、国民の祝日<br>年末年始(12月29日～1月3日)</dd>
+      <dt>公式サイト</dt><dd><a href="https://www.city.abashiri.hokkaido.jp/site/artmuseum/" target="_blank" rel="noopener">網走市立美術館 公式ページ</a></dd>
+    </dl>
+
+    <div class="mapbox">
+      <iframe title="網走市立美術館の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=%E5%8C%97%E6%B5%B7%E9%81%93%E7%B6%B2%E8%B5%B0%E5%B8%82%E5%8D%976%E6%9D%A1%E8%A5%BF1%E4%B8%81%E7%9B%AE%20%E7%B6%B2%E8%B5%B0%E5%B8%82%E7%AB%8B%E7%BE%8E%E8%A1%93%E9%A4%A8&hl=ja&z=16&output=embed"></iframe>
+      <div class="btn-row">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E5%8C%97%E6%B5%B7%E9%81%93%E7%B6%B2%E8%B5%B0%E5%B8%82%E5%8D%976%E6%9D%A1%E8%A5%BF1%E4%B8%81%E7%9B%AE%20%E7%B6%B2%E8%B5%B0%E5%B8%82%E7%AB%8B%E7%BE%8E%E8%A1%93%E9%A4%A8" target="_blank" rel="noopener">Googleマップで開く</a>
+      </div>
+    </div>
+
+    <div class="btn-row" style="margin-top:64px">
+      <a class="btn line" href="https://www.city.abashiri.hokkaido.jp/form/detail.php?sec_sec1=29&lif_id=17994&check" target="_blank" rel="noopener">お問い合わせフォーム</a>
+      <a class="btn line" href="https://www.city.abashiri.hokkaido.jp/site/artmuseum/" target="_blank" rel="noopener">公式サイトを見る</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="serif">網走市立美術館</span>
+  北海道網走市南6条西1丁目　TEL 0152-44-5045
+</footer>
+
+</body>
+</html>
